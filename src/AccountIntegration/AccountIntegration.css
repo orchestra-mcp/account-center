@@ -1,0 +1,172 @@
+/**
+ * AccountIntegration Component Styles
+ * Uses CSS variables from theme system
+ */
+
+.account-integration {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.account-integration__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.account-integration__item:last-child {
+  border-bottom: none;
+}
+
+.account-integration__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: var(--color-bg-alt);
+  color: var(--color-fg-muted);
+}
+
+.account-integration__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.account-integration__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-fg);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.account-integration__status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  flex-shrink: 0;
+}
+
+.account-integration__description {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  margin-top: 2px;
+}
+
+.account-integration__meta {
+  font-size: 11px;
+  color: var(--color-fg-muted);
+  margin-top: 2px;
+}
+
+.account-integration__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.account-integration__btn {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.account-integration__btn--connect {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.account-integration__btn--connect:hover {
+  opacity: 0.85;
+}
+
+.account-integration__btn--disconnect {
+  background-color: transparent;
+  color: var(--color-danger, #ef4444);
+  border: 1px solid var(--color-danger, #ef4444);
+}
+
+.account-integration__btn--disconnect:hover {
+  background-color: var(--color-danger, #ef4444);
+  color: #ffffff;
+}
+
+.account-integration__btn--configure {
+  background-color: transparent;
+  color: var(--color-fg);
+}
+
+.account-integration__btn--configure:hover {
+  background-color: var(--color-bg-active);
+}
+
+/* Compact variant */
+[data-variant='compact'] .account-integration__item {
+  padding: 8px 0;
+  gap: 8px;
+}
+
+[data-variant='compact'] .account-integration__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+[data-variant='compact'] .account-integration__name {
+  font-size: 13px;
+}
+
+[data-variant='compact'] .account-integration__description {
+  font-size: 11px;
+}
+
+[data-variant='compact'] .account-integration__btn {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Modern variant */
+[data-variant='modern'] .account-integration__item {
+  padding: 16px;
+  border-bottom: none;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: var(--color-bg-alt);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-variant='modern'] .account-integration__item:last-child {
+  margin-bottom: 0;
+}
+
+[data-variant='modern'] .account-integration__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+[data-variant='modern'] .account-integration__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+[data-variant='modern'] .account-integration__btn {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 14px;
+}
